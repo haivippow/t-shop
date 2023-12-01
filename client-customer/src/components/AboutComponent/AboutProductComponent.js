@@ -1,7 +1,7 @@
 import React from 'react';
-import productImage from './c2.jpg'; // Đường dẫn đến hình ảnh sản phẩm
-import missionImage from './x2.jpg'; // Đường dẫn đến hình ảnh cho sứ mệnh
 import Footer from '../FooterComponent/FooterComponent';
+import productImage from '../../assets/images/c2.jpg';
+import missionImage from '../../assets/images/x22.jpg';
 
 const AboutProduct = () => {
   const paragraphStyle = {
