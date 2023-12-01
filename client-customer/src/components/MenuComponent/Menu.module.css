@@ -75,10 +75,84 @@ a {
   display: block;
 }
 
+/* Menu.module.css */
+
+/* ... */
+
+.menu a {
+  text-decoration: none;
+  color: black; /* MÃ u chá»¯ máº·c Ä‘á»‹nh */
+  position: relative;
+}
+
+.menu a:hover {
+  color: red; /* MÃ u chá»¯ khi rÃª chuá»™t vÃ o */
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover::after {
+  background-color: red; /* MÃ u Ä‘á» khi rÃª chuá»™t vÃ o */
+}
+
+/* ... */
+/* Menu.module.css */
+
+/* ... */
+
+.menu {
+  display: inline;
+  margin-right: 40px; /* Äiá»u chá»‰nh giÃ¡ trá»‹ margin-right tÃ¹y thÃ­ch Ä‘á»ƒ dá»‹ch chuyá»ƒn menu qua bÃªn pháº£i */
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center; /* Canh giá»¯a ná»™i dung trong menu */
+  margin-left: 60px; /* Äiá»u chá»‰nh giÃ¡ trá»‹ margin-right tÃ¹y thÃ­ch Ä‘á»ƒ dá»‹ch chuyá»ƒn menu qua bÃªn pháº£i */
+
+}
+/* Menu.module.css */
+
+/* ... (cÃ¡c style hiá»‡n cÃ³) ... */
+
+
+.aboutLink:hover {
+  color: red; /* MÃ u chá»¯ khi di chuá»™t vÃ o */
+  text-decoration: none; /* Loáº¡i bá» gáº¡ch dÆ°á»›i khi di chuá»™t vÃ o */
+}
+/* Menu.module.css */
+
+/* ... (cÃ¡c style hiá»‡n cÃ³) ... */
+
+.aboutLink {
+  text-decoration: underline; /* Gáº¡ch dÆ°á»›i cho má»¥c About */
+  color: black; /* MÃ u chá»¯ máº·c Ä‘á»‹nh */
+  margin-left: 50px; /* Di chuyá»ƒn má»¥c About qua bÃªn trÃ¡i */
+
+}
+
+.aboutLink:hover {
+  color: red; /* MÃ u chá»¯ khi di chuá»™t vÃ o */
+  text-decoration: none; /* Loáº¡i bá» gáº¡ch dÆ°á»›i khi di chuá»™t vÃ o */
+}
+
+/* ... */
+
 @media only screen and (max-width: 768px) {
   /* Show the toggle button and hide the categories on small screens */
   .toggleButton {
     display: block;
+  }
+  .aboutLink{
+    padding-left: 35px;
+    
   }
 
   .ulMenu {

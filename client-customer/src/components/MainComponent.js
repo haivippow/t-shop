@@ -20,6 +20,7 @@ import MyProductFavorite from './MyProductFavoriteComponent/MyProductFavoriteCom
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddressUpdate from './AddressComponent/AddressUpdateComponent';
+import AboutProduct from './AboutComponent/AboutProductComponent';
 
 class Main extends Component {
   render() {
@@ -46,6 +47,8 @@ class Main extends Component {
           <Route path='/contactinfo' element={<ContactInfo />} />
           <Route path='/reset-password' element={<ResetPW />} />
           <Route path='/myproductfavorite' element={<MyProductFavorite />} />
+          <Route path='/about-product' element={<AboutProduct />} />
+          
         
         </Routes>
         <TawkMessenger />

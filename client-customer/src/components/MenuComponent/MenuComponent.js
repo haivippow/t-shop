@@ -40,7 +40,8 @@ class Menu extends Component {
           </button>
           <ul className={`${style.ulMenu} ${this.state.showMenu ? style.showMenu : ''}`} >
             DANH MỤC SẢN PHẨM {' '}{this.renderCategories()}
-          </ul>
+         
+          <Link to='/about-product' className={style.aboutLink}>ABOUT</Link>  </ul>
 
         </div>
         <div className={style.floatRight}>
