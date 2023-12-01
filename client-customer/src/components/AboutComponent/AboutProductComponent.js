@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../FooterComponent/FooterComponent';
 import productImage from '../../assets/images/c2.jpg';
-import missionImage from '../../assets/images/x22.jpg';
+import missionImage from '../../assets/images/x2.jpg';
 
 const AboutProduct = () => {
   const paragraphStyle = {
