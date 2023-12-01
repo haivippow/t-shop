@@ -29,7 +29,7 @@ class Product extends Component {
               {item.sale > 0 && (
                 <>
                 <span className={styles.saleIcon}>SALE {item.sale} %</span><br />
-                <span>Giảm Còn: {(item.price-((item.price)*(item.sale )/100)).toLocaleString('vi-VN')} VNĐ</span>
+                <span>Giảm Còn: {(item.price-(item.price)*(item.sale )/100).toLocaleString('vi-VN')} VNĐ</span>
               </>
             )}
             </figcaption>
