@@ -239,11 +239,11 @@ router.post('/reset-password', async function (req, res) {
     return res.json({ success: false, message: 'Email Không Tồn Tại' });
   } else {
     const now = new Date().getTime(); // milliseconds
-    const token = CryptoUtil.md5(now.toString());
-    const updateTokenResult = await CustomerDAO.updateResetToken(dbCust._id, token);
+    const resetToken = CryptoUtil.md5(now.toString());
+    const updateTokenResult = await CustomerDAO.updateResetToken(dbCust._id, resetToken);
 
     if (updateTokenResult) {
-      const send = await EmailUtil.sendToken(email, token);
+      const send = await EmailUtil.sendToken(email, resetToken);
 
       if (send) {
         res.json({ success: true, message: 'Vui Lòng Kiểm Tra Email' });

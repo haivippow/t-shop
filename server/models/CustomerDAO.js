@@ -71,11 +71,11 @@ const CustomerDAO = {
   
   },
 
-  async updateResetToken(customerId, token) {
+  async updateResetToken(customerId, resetToken) {
     try {
       const updatedCustomer = await Models.Customer.findByIdAndUpdate(
         customerId,
-        { resetToken: token },
+        { resetToken: resetToken },
         { new: true } // Return the updated document
       );
 
@@ -92,10 +92,10 @@ const CustomerDAO = {
   },
   async  updatePasswordWithEmailAndToken(email, resetToken, newPassword) {
     try {
-      const customer = await Models.Customer.findOne({ email, resetToken: token });
+      const customer = await Models.Customer.findOne({ email:email, resetToken: resetToken });
       
       if (!customer) {
-        return { success: false, message: 'Invalid email or activation link' };
+        return { success: false, message: 'Sai Email Hoặc TOKEN' };
       }
       // Update the password and other fields
       customer.password = newPassword;

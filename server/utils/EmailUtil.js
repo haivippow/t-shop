@@ -24,8 +24,8 @@ const EmailUtil = {
       });
     });
   },
-  sendToken(email, token) {
-    const text = 'Please input this information to recover the password for your account:\n\t .TOKEN: ' + token ;
+  sendToken(email, resetToken) {
+    const text = 'Please input this information to recover the password for your account:\n\t .TOKEN: ' + resetToken ;
     return new Promise(function (resolve, reject) {
       const mailOptions = {
         from: MyConstants.EMAIL_USER,

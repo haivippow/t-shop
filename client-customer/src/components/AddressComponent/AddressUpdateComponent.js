@@ -65,7 +65,7 @@ class AddressUpdate extends Component {
       } else {
         this.context.setToken(token_user);
        this.context.setCustomer(result);
-       if (this.context.order!="") {
+       if (this.context.order!=="") {
         const order =this.context.order;
       
    
