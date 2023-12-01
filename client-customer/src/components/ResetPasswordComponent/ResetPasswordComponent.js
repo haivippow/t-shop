@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { toast } from 'react-toastify';
 import MyContext from '../../contexts/MyContext';
 import style from './Reset.module.css'
+import withRouter from '../../utils/withRouter';
+
 class ResetPW extends Component {
       static contextType = MyContext; // using this.context to access global state
   constructor(props) {
@@ -74,6 +76,7 @@ class ResetPW extends Component {
         const result = res.data;
         if(result.success===true){
           toast.success(result.message);
+          this.props.navigate('/login');
         }
         else{
           toast.error(result.message);
@@ -101,6 +104,7 @@ class ResetPW extends Component {
       const result = res.data;
       if(result.success===true){
         toast.success(result.message);
+
       }else{
         toast.error(result.message);
       }
@@ -119,4 +123,4 @@ class ResetPW extends Component {
     }
   }
 }
-export default ResetPW;
+export default withRouter(ResetPW);
